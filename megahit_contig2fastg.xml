@@ -15,7 +15,7 @@
     ]]></command>
     <inputs>
         <param name="contigs" type="data" format="fastq,fastqsanger,fasta,fastq.gz,fastqsanger.gz" multiple="true" label="Single-end file(s)" help="FASTQ/FASTA/FASTQ.GZ files accepted" />
-        <param name="kmer" type="integer" value="21" label="K-mer" />
+        <param name="kmer" type="integer" value="21" label="K-mer length" />
     </inputs>
     <outputs>
         <data format="fasta" name="fastg" label="Conversion to FASTG with ${tool.name} on ${on_string}" />
@@ -23,6 +23,7 @@
     <tests>
         <test>
             <param name="contigs" value="k21.contigs.fa" ftype="fasta" />
+            <param name="kmer" value="21"/>
             <output name="fastg">
                 <assert_contents>
                     <has_text text=">NODE_1_length_576" />
@@ -34,7 +35,7 @@
 
 **MEGAHIT_toolkit contig2fastg**
 
-Contig2fastg is a subprogram within the MEGAHIT toolkit. It converts MEGAHIT's k*.contigs.fa to fastg format that can be viewed by Bandage
+Contig2fastg is a subprogram within the MEGAHIT toolkit. It converts MEGAHIT's k*.contigs.fa to fastg format that can be viewed by Bandage.
 
 **MEGAHIT**
 
