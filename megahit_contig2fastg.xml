@@ -15,7 +15,7 @@
     ]]></command>
     <inputs>
         <param name="contigs" type="data" format="fastq,fastqsanger,fasta,fastq.gz,fastqsanger.gz" multiple="true" label="Single-end file(s)" help="FASTQ/FASTA/FASTQ.GZ files accepted" />
-        <param name="kmer" type="integer" value="21" label="K-mer length" />
+        <param name="kmer" type="integer" value="99" label="K-mer length" />
     </inputs>
     <outputs>
         <data format="fasta" name="fastg" label="Conversion to FASTG with ${tool.name} on ${on_string}" />
