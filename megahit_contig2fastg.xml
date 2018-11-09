@@ -33,7 +33,7 @@
     </tests>
     <help><![CDATA[
 
-**MEGAHIT_toolkit contig2fastg**
+**megahit_toolkit contig2fastg**
 
 Contig2fastg is a subprogram within the MEGAHIT toolkit. It converts MEGAHIT's k*.contigs.fa to fastg format that can be viewed by Bandage.
 
