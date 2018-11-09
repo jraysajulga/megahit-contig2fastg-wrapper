@@ -35,7 +35,7 @@
 
 **MEGAHIT toolkit's contig2fastg**
 
-Contig2fastg is a subprogram within the MEGAHIT toolkit. It converts MEGAHIT's contigs.fa to fastg format that can be viewed by Bandage  and used for protein/peptide identification through graph2pro.
+Contig2fastg is a subprogram within the MEGAHIT toolkit. It converts MEGAHIT's contigs (.fa) to assembly graphs (.fastg) that can be utilized for protein/peptide identification via graph2pro and can also be visualized via Bandage
 
 Example command: megahit_toolkit contig2fastg 99 intermediate_contigs/k99.contigs.fa > k99.contigs.fastg
 
