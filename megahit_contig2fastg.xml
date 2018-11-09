@@ -1,8 +1,8 @@
-<?xml version='1.0' encoding='utf-8'?>
-<tool id="megahit_contig2fastg" name="megahit_toolkit contig2fastg" version="@VERSION@">
-    <description>for converting MEGAHIT's contigs to fastg</description>
+<?xml version='0.9' encoding='utf-8'?>
+<tool id="megahit_contig2fastg" name="megahit contig2fastg" version="@VERSION@">
+    <description>for converting MEGAHIT's contigs to assembly graphs (fastg)</description>
     <macros>
-        <token name="@VERSION@">1.1.2</token>
+        <token name="@VERSION@">1.1.3</token>
     </macros>
     <requirements>
         <requirement type="package" version="@VERSION@">megahit</requirement>
@@ -14,8 +14,8 @@
         '${contigs}' > '${fastg}'
     ]]></command>
     <inputs>
-        <param name="contigs" type="data" format="fasta" label="Contig file" />
-        <param name="kmer" type="integer" value="99" label="K-mer length" />
+        <param name="contigs" type="data" format="fasta" label="Contig file" help="Ex: k99.contigs.fa" />
+        <param name="kmer" type="integer" value="99" label="K-mer length" help="usually indicated within the filename (when derived from MEGAHIT)"/>
     </inputs>
     <outputs>
         <data format="txt" name="fastg" label="Conversion to FASTG with ${tool.name} on ${on_string}" />
@@ -35,7 +35,7 @@
 
 **megahit_toolkit contig2fastg**
 
-Contig2fastg is a subprogram within the MEGAHIT toolkit. It converts MEGAHIT's k*.contigs.fa to fastg format that can be viewed by Bandage.
+Contig2fastg is a subprogram within the MEGAHIT toolkit. It converts MEGAHIT's contigs.fa to fastg format that can be viewed by Bandage  and used for protein/peptide identification through graph2pro.
 
 **MEGAHIT**
 
@@ -46,7 +46,12 @@ MEGAHIT is a single node assembler for large and complex metagenomics NGS reads,
 **Project links:**
 
 https://github.com/voutcn/megahit
+
 https://github.com/voutcn/megahit/blob/master/tools/toolkit.cpp
+
+https://github.com/COL-IU/graph2pro-var
+
+http://rrwick.github.io/Bandage/
 
 
     ]]></help>
